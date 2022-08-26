@@ -12,13 +12,13 @@ jobs:
         
         steps:              
               - uses: actions/checkout@v1             
-                id: find-pull-request
+                id: findPr
                 with:
                     # Can be "open", "closed", or "all".  Defaults to "open".
                   state: open
               - run: echo "Pull Request ${number}"
                 env: 
-                  number: ${{ steps.find-pull-request.outputs.number }}
+                  number: ${{ steps.findPr.outputs.number }}
             
              
               
