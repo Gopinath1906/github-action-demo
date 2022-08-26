@@ -10,13 +10,15 @@ jobs:
     build: 
         runs-on: ubuntu-latest
         
-        steps:              
+        steps:  
+              - name: Checkout
               - uses: actions/checkout@v1 
               - name: npm install and build
                 run: |
                     npm ci
                     npm run build
               - name: Finding Pull Request
+                uses: ./
                 id: findPr
                 with:
                     # Can be "open", "closed", or "all".  Defaults to "open".
