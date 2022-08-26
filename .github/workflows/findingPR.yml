@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         
         steps:              
-              - uses: Gopinath1906/github-action-demo@v3             
+              - uses: actions/checkout@v1             
                 id: find-pull-request
                 with:
                   branch: my-branch-name
