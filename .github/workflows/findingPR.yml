@@ -14,11 +14,12 @@ jobs:
               - uses: actions/checkout@v1             
                 id: find-pull-request
                 with:
-                  branch: my-branch-name
-              - run: echo "Pull Request ${number} (${sha})"
+                    # Can be "open", "closed", or "all".  Defaults to "open".
+                  state: open
+              - run: echo "Pull Request ${number}"
                 env: 
                   number: ${{ steps.find-pull-request.outputs.number }}
-                  sha: ${{ steps.find-pull-request.outputs.head-sha }}
+            
              
               
     
