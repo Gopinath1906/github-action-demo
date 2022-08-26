@@ -3,12 +3,19 @@ name: findingPR
 on:    
   push:
     branches: [ "main" ]
-
+    
 jobs:
-    # The type of runner that the job will run on
-     build:
-   runs-on: ubuntu-latest
-       
-    steps:
-    - name: Run a one-line script
-        run: echo Hello, world!
+    build: 
+        runs-on: ubuntu-latest
+        
+        steps:              
+              - uses: actions/checkout@v3
+              - name: rune script
+              
+                run: echo Finding PullRequest
+              
+              
+    
+  
+    
+
