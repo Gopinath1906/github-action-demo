@@ -15,7 +15,7 @@ jobs:
                 id: findPr
                 with:
                     # Can be "open", "closed", or "all".  Defaults to "open".
-                  branch: Pull2
+                  state: all
               - run: echo "Pull Request ${number}"
                 env: 
                   number: ${{ steps.findPr.outputs.number }}
