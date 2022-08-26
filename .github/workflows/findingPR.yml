@@ -11,8 +11,7 @@ jobs:
         steps:              
               - uses: actions/checkout@v1             
                 id: find-pull-request
-                with:
-                  branch: my-branch-name
+               
               - run: echo "Pull Request ${number} (${sha})"
                 env: 
                   number: ${{ steps.find-pull-request.outputs.number }}
