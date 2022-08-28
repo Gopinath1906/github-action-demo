@@ -12,11 +12,11 @@ jobs:
         
         steps: 
               - name: Finding Pull Request
-                uses: actions/checkout@v1          
+                uses: Gopinath1906/github-action-demo@v1          
                 id: findPr
                 with:
                     # Can be "open", "closed", or "all".  Defaults to "open".
-                   state: all
+                 state: all
               - run: echo "Your PR is ${PR}"
                 if: success() && steps.findPr.outputs.number
                 env:
