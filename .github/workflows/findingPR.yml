@@ -12,7 +12,7 @@ jobs:
         
         steps: 
               - name: Finding Pull Request
-                uses: Gopinath1906/github-action-demo@v1          
+                uses: Gopinath1906/github-action-demo@v2          
                 id: findPr
                 with:
                     # Can be "open", "closed", or "all".  Defaults to "open".
