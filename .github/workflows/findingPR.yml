@@ -21,7 +21,8 @@ jobs:
               - run: echo "Your PR is ${PR}"
                 #if: success() && steps.findPr.outputs.number
                 env:
-                  PR: ${{ steps.findPr.outputs.number }}
+                  #PR: ${{ steps.findPr.outputs.number }}
+                  PR: ${{ github.event.number }}
              
               
     
