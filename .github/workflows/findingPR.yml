@@ -19,7 +19,7 @@ jobs:
                    branch: origin/main
               - run: echo "Pull Request ${Number}"
                 env: 
-                  Number: ${{ steps.findPr.env.number }}
+                  Number: ${{ steps.findPr.outputs.number }}
             
              
               
