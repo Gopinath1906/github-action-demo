@@ -12,9 +12,10 @@ jobs:
         
         steps: 
               - name: Finding Pull Request
-                uses: Gopinath1906/github-action-demo@v2          
+                uses: actions/checkout@v1          
                 id: findPr
                 with:
+                 ref: 'Gopinath1906/github-action-demo'
                     # Can be "open", "closed", or "all".  Defaults to "open".
                  state: all
               - run: echo "Your PR is ${PR}"
