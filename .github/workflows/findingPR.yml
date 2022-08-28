@@ -17,9 +17,10 @@ jobs:
                 with:
                     # Can be "open", "closed", or "all".  Defaults to "open".
                    branch: origin/main
-              - run: echo "Pull Request ${Number}"
-                env: 
-                  Number: ${{ steps.findPr.outputs.number }}
+              - run: echo ${{github.event.number}}
+              #- run: echo "Pull Request ${Number}"
+                #env: 
+                  #Number: ${{ steps.findPr.outputs.number }}
             
              
               
