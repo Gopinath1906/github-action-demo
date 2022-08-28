@@ -14,11 +14,12 @@ jobs:
               - name: Check Out repository
                 uses: actions/checkout@v1          
                 id: findPr
-                with:
+              - run: echo "Overall PR are ${{github.event.number}}"
+                #with:
                  #ref: 'Gopinath1906/github-action-demo'
                     # Can be "open", "closed", or "all".  Defaults to "open".
-                 state: all
-              - run: echo "Overall PR are ${{github.event.number}}"
+                 #state: all
+              
                 #if: success() && steps.findPr.outputs.number
                 #env:
                   #PR: ${{ steps.findPr.outputs.number }}
