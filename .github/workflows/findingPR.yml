@@ -18,7 +18,7 @@ jobs:
                  #ref: 'Gopinath1906/github-action-demo'
                     # Can be "open", "closed", or "all".  Defaults to "open".
                  state: all
-              - run: echo "Overall PR are ${github.event.number}"
+              - run: echo "Overall PR are ${{github.event.number}}"
                 #if: success() && steps.findPr.outputs.number
                 #env:
                   #PR: ${{ steps.findPr.outputs.number }}
