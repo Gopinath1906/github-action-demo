@@ -11,7 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         
         steps: 
-              - name: Finding Pull Request
+              - name: Check Out repository
                 uses: actions/checkout@v1          
                 id: findPr
                 with:
