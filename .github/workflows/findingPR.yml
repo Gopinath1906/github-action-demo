@@ -9,15 +9,14 @@ jobs:
         runs-on: ubuntu-latest
         
         steps:              
-              - uses: actions/checkout@v3             
-                id: find-pull-request
-                with:
-                  branch: my-branch-name
-              - run: echo "Pull Request ${number} (${sha})"
-                env: 
-                  number: ${{ steps.find-pull-request.outputs.number }}
-                  sha: ${{ steps.find-pull-request.outputs.head-sha }}
-              #creating new branch
+              - uses: actions/checkout@v3
+              - uses: actions/setup-node@v3
+                with: 
+                  node-version: 16
+              - run: npm ci
+              - run: npm test
+      
+          
               
     
   
