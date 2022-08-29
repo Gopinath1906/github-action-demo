@@ -12,8 +12,9 @@ jobs:
         
         steps: 
               - name: Check Out repository
-              - uses: actions/checkout@v1  
-              - uses : actions/setup-node@v1
+                uses: actions/checkout@v1  
+              - name: use node
+                uses: actions/setup-node@v1
                 with :
                        node-version: 16
               - run: npm ci
